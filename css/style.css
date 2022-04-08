@@ -254,79 +254,7 @@ img{
 }
 /*animations css end*/
 
-/*header section css start*/
-.navbar_toggler {
-    padding: 0;
-    height: 35px;
-    width: 35px;
-    border: none;
-    outline: none !important;
-    background-color: transparent;
-    border-radius: 5px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 15px;
-    z-index: 9999;
-}
-.navbar_toggler .navbar_toggler_inner,
-.navbar_toggler .navbar_toggler_inner:after,
-.navbar_toggler .navbar_toggler_inner:before {
-    width: 35px;
-    height: 4px;
-    transition-timing-function: ease;
-    transition-duration: 0.3s;
-    transition-property: transform;
-    border-radius: 4px;
-    background-color: #ed6d00;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-.navbar_toggler .navbar_toggler_inner{
-    transition: top 75ms ease 0.12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-.navbar_toggler .navbar_toggler_inner:after,
-.navbar_toggler .navbar_toggler_inner:before {
-    display: block;
-    content: "";
-}
-.navbar_toggler .navbar_toggler_inner:before {
-    transition: top 75ms ease 0.12s,opacity 75ms ease;
-    top: -12px;
-}
-.navbar_toggler .navbar_toggler_inner:after {
-    transition: bottom 75ms ease 0.12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
-    bottom: -12px;
-}
-.navbar_toggler.open_menu .navbar_toggler_inner {
-    transition: top 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) 0.12s;
-    transform: rotate(45deg);
-    top: 0;
-}
-.navbar_toggler.open_menu .navbar_toggler_inner:before {
-    top: 0;
-    transition: top 75ms ease,opacity 75ms ease 0.12s;
-    opacity: 0;
-}
-.navbar_toggler.open_menu .navbar_toggler_inner:after {
-    bottom: 0;
-    transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) 0.12s;
-    transform: rotate(-90deg);
-}
-/*header section css end*/
-
-.site{
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    background-color: #FFFBC7;
-    background-image: url('../images/bg_pattern.png');
-}
+/* General css start */
 .custom_w_100{
     width: 100%;
 }
@@ -337,48 +265,35 @@ img{
 .bttn_wrapper img{
     width: 100%;
 }
+/* General css end */
+
+/* site main css start */
+.site{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #FFFBC7;
+    background-image: url('../images/bg_pattern.png');
+}
+/* site main css end */
+
+/* section cycle css start */
 section.section_cycle {
     padding: 10px 0;
 }
-.section_graph .graph_tab{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-.section_graph .graph_tab .bx{
-    position: relative;
-    width: 32%;
-    background-color: #D10000;
-    border-radius: 5px;
-    padding: 12px;
-}
-.section_graph .graph_tab .bx.act:before{
-    content: '';
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-width: 20px 20px 0 20px;
-    border-style: solid;
-    border-color: #D10000 transparent transparent transparent;
-}
-.section_graph .graph_tab .bx img{
-    width: 70%;
-    margin: auto;
-}
-.section_graph .top_content img,
-.section_graph .btm_content img{
-    width: 80%;
-    margin: auto;
-}
-.section_graph .graph_img{
-    padding: 30px 0;
-}
+/* section cycle css start */
 
+/* section graph css start */
+.section_graph{
+    position: relative;
+    padding: 10px 0;
+}
+.section_graph .bttn_wrapper{
+    display: none;
+}
+/* section graph css end */
+
+/* section acheivement css start */
 .section_acheivement{
     position: relative;
     padding-bottom: 10px;
@@ -389,13 +304,9 @@ section.section_cycle {
     left: 5%;
     width: 25%;
 }
-.section_graph{
-    position: relative;
-    padding: 10px 0;
-}
-.section_graph .bttn_wrapper{
-    display: none;
-}
+/* section acheivement css end */
+
+/* section gallery css start */
 .section_gallery{
     position: relative;
     padding: 10px 0;
@@ -403,6 +314,9 @@ section.section_cycle {
 .section_gallery .bttn_wrapper{
     display: none;
 }
+/* section gallery css end */
+
+/* section table css start */
 .section_table{
     position: relative;
 }
@@ -412,12 +326,18 @@ section.section_cycle {
     right: 3%;
     width: 26%;
 }
+/* section table css end */
+
+/* section service css start */
 .section_service{
     position: relative;
 }
 .section_service .bttn_wrapper{
     display: none;
 }
+/* section service css end */
+
+/* footer css start */
 .site_footer{
     position: relative;
 }
@@ -427,6 +347,7 @@ section.section_cycle {
     right: 9%;
     width: 28%;
 }
+/* footer css end */
 
 @media (max-width: 675px){
     .section_acheivement .bttn_wrapper{
