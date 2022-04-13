@@ -46,6 +46,12 @@ img{
 .csp {
     display: none !important;
 }
+.site_pc {
+    display: block !important;
+}
+.site_sp {
+    display: none !important;
+}
 @media (max-width: 675px){
     .cpc{
         display: none !important;
@@ -53,6 +59,12 @@ img{
     .csp{
         display: block !important;
     }
+    .site_pc {
+        display: none !important;
+    }
+    .site_sp {
+        display: block !important;
+    };
 }
 /*common css end*/
 
@@ -268,125 +280,152 @@ img{
 /* General css end */
 
 /* site main css start */
-.site{
+.site {
     width: 100%;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: auto;
     background-color: #FFFBC7;
-    background-image: url('../images/bg_pattern.png');
+    background-image: url('../images/yellow_dot.png');
 }
+.site2 {
+    margin-top: -10.6vw;
+    width: 100%;
+    /* max-width: 1000px; */
+    background-color: #D10000;
+    background-image: url('../images/black_dot.png');}
 /* site main css end */
 
-/* section cycle css start */
-section.section_cycle {
-    padding: 10px 0;
-}
-/* section cycle css start */
-
-/* section graph css start */
-.section_graph{
+.btn_section {
     position: relative;
-    padding: 10px 0;
 }
-.section_graph .bttn_wrapper{
-    display: none;
-}
-/* section graph css end */
-
-/* section acheivement css start */
-.section_acheivement{
-    position: relative;
-    padding-bottom: 10px;
-}
-.section_acheivement .bttn_wrapper{
+.btn_section .btn_wrapper {
     position: absolute;
     bottom: 0;
-    left: 5%;
-    width: 25%;
+    width: 28vw;
+    left: 3.6vw;
+    bottom: 1vw;
 }
-/* section acheivement css end */
+.btn_wrapper img {
+     width: 100%;
+}
 
-/* section gallery css start */
-.section_gallery{
-    position: relative;
-    padding: 10px 0;
+.btn_section.btn2 .btn_wrapper {
+    right: 1.6vw;
+    left: unset;
+    bottom: 1vw;
 }
-.section_gallery .bttn_wrapper{
-    display: none;
-}
-/* section gallery css end */
 
-/* section table css start */
-.section_table{
-    position: relative;
+.btn_section.btn3 .btn_wrapper {
+    width: 32vw;
+    height: 6vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
-.section_table .bttn_wrapper{
-    position: absolute;
-    bottom: 3%;
-    right: 3%;
-    width: 26%;
+.btn_section.btn4 .btn_wrapper {
+    right: 7.8vw;
+    bottom: 4vw;
+    width: 28vw;
+    left: unset;
 }
-/* section table css end */
 
-/* section service css start */
-.section_service{
-    position: relative;
+.footer {
+    padding-bottom: 20px;
 }
-.section_service .bttn_wrapper{
-    display: none;
+.footer p {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-family: sans-serif;
 }
-/* section service css end */
+.footer a {
+    color: #fff;
+}
+.footer p span {
+    word-break: keep-all;
+}
 
-/* footer css start */
-.site_footer{
-    position: relative;
+.spbtn_section {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.site_footer .bttn_wrapper{
-    position: absolute;
-    bottom: 9%;
-    right: 9%;
-    width: 28%;
+.spbtn_section .btn_wrapper {
+    width: 70%
 }
-/* footer css end */
-
-@media (max-width: 675px){
-    .section_acheivement .bttn_wrapper{
-        position: static;
-        width: 38%;
-        margin: 10px auto 0;
+.spbtn_section.move_upbtn {
+    margin-top: -40px;
+}
+.last_area {
+    background-color: #fff;
+    margin: 0 15px 30px 15px;
+    border-radius: 8px;
+}
+@media (max-width: 675px) {
+    .footer p {
+        font-size: 16px;
     }
-    .section_graph .bttn_wrapper{
+    .footer p span {
+        word-break: keep-all;
         display: block;
-        width: 50%;
-        margin: auto;
-        padding-left: 11%;
+        text-align: center;
     }
-    .section_gallery .bttn_wrapper{
-        display: block;
-        width: 40%;
-        margin: auto;
+}
+
+
+
+@keyframes shiny__btn {
+    0% { 
+        transform: scale(0) rotate(45deg); 
+        opacity: 0; 
     }
-    .section_table .bttn_wrapper {
-        bottom: 24%;
-        right: 0;
-        width: 34%;
-        left: 0;
-        margin: auto;
+    80% { 
+        transform: scale(0) rotate(45deg); 
+        opacity: 0.3; 
     }
-    .section_service .bttn_wrapper{
-        display: block;
-        width: 42%;
-        margin: auto;
-        position: absolute;
-        bottom: 1.5%;
-        left: 0;
-        right: 0;
+    81% { 
+        transform: scale(4) rotate(45deg); 
+        opacity: 1; 
     }
-    .site_footer .bttn_wrapper {
-        bottom: 5.5%;
-        right: 0;
-        width: 57%;
-        left: 0;
-        margin: auto;
+    100% { 
+        transform: scale(50) rotate(45deg); 
+        opacity: 0; 
+    }
+}
+@-webkit-keyframes shiny__btn {
+    0% { 
+        -webkit-transform: scale(0) rotate(45deg); 
+        opacity: 0; 
+    }
+    80% { 
+        -webkit-transform: scale(0) rotate(45deg); 
+        opacity: 0.3; 
+    }
+    81% { 
+        -webkit-transform: scale(4) rotate(45deg); 
+        opacity: 1; 
+    }
+    100% { 
+        -webkit-transform: scale(50) rotate(45deg); 
+        opacity: 0; 
+    }
+}
+@-ms-keyframes shiny__btn {
+    0% { 
+        -ms-transform: scale(0) rotate(45deg); 
+        opacity: 0; 
+    }
+    80% { 
+        -ms-transform: scale(0) rotate(45deg); 
+        opacity: 0.3; 
+    }
+    81% { 
+        -ms-transform: scale(4) rotate(45deg); 
+        opacity: 1; 
+    }
+    100% { 
+        -ms-transform: scale(50) rotate(45deg); 
+        opacity: 0; 
     }
 }
